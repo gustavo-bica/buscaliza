@@ -7,20 +7,20 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
     depends_on:
-      - db
+      - bd
     environment:
-      DB_HOST: db
-      DB_USER: root
-      DB_PASSWORD: password
-      DB_DATABASE: buscaliza_db
+      BD_HOST: bd
+      BD_USER: root
+      BD_PASSWORD: password
+      BD_DATABASE: buscaliza_bd
 
-  db:
+  bd:
     image: mysql:8.0
     ports:
       - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: buscaliza_db
+      MYSQL_DATABASE: buscaliza_bd
     volumes:
       - mysql_data:/var/lib/mysql
 
