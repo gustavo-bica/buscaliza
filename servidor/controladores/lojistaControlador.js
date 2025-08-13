@@ -1,5 +1,5 @@
 // lojistaControlador.js
-const dbPool = require('../bd/bd'); 
+const dbPool = require('../bd'); 
 
 const buscarTodosOsLojistas = async (req, res) => {
   try {
