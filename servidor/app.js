@@ -6,7 +6,7 @@ const path = require('path');
 // Corrigido para carregar o arquivo com o nome certo
 const lojistasRotas = require('./rotas/lojistas'); 
 
-const bdPool = require('./bd/bd');
+const bdPool = require('./bd');
 
 const app = express();
 const PORTA = process.env.PORTA || 3000;
