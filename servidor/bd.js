@@ -1,4 +1,4 @@
-// arquivo: servidor/bd.js
+// servidor/bd.js
 
 const mysql = require('mysql2/promise');
 
