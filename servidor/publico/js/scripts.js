@@ -1,5 +1,6 @@
-// Espera o conteúdo da página carregar completamente antes de executar o script
-document.addEventListener('DOMContentLoaded', () => {
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => { // Espera o conteúdo da página carregar completamente antes de executar o script
     
     const lojasContainer = document.getElementById('lojas-container');
 
@@ -25,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.createElement('div');
                 card.className = 'loja-card';
                 
-                // Futuramente, a URL da imagem e o status virão do banco.
-                // Por enquanto, usamos um placeholder.
                 const logoUrl = `https://placehold.co/100x100/EFEFEF/333?text=${lojista.nome_loja.charAt(0)}`;
                 const status = 'Fechada'; // Exemplo
                 const statusClass = status.toLowerCase(); // 'fechada' ou 'aberta'
@@ -49,4 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     carregarLojistas();
+
 });

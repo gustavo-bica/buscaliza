@@ -1,11 +1,14 @@
 // servidor/app.js
 
+// Forma longa e equivalente
+// const dotenv = require('dotenv');
+// dotenv.config();
+
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
 
-// Corrigido para carregar o arquivo com o nome certo
-const lojistasRotas = require('./rotas/lojistas'); 
+const lojistasRotas = require('./rotas/lojistas'); // vai até /rotas/lojistas e executa até o fim
 
 const bdPool = require('./bd');
 
@@ -14,7 +17,6 @@ const PORTA = process.env.PORTA || 3000;
 
 app.use(express.static(path.join(__dirname, 'publico')));
 
-// A URL aqui já estava correta, o problema era o arquivo importado
 app.use('/api/lojistas', lojistasRotas);
 
 app.listen(PORTA, () => {

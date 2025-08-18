@@ -4,7 +4,6 @@ const dbPool = require('../bd');
 
 const buscarTodosOsLojistas = async (req, res) => {
   try {
-    // Corrigido para buscar na tabela 'lojistas' e selecionar os campos corretos
     const [lojistas] = await dbPool.query('SELECT id, usuario_lojista, nome_loja FROM lojistas');
     
     res.status(200).json(lojistas);
@@ -15,7 +14,6 @@ const buscarTodosOsLojistas = async (req, res) => {
   }
 };
 
-// Corrigido para exportar a função com o nome certo
 module.exports = {
   buscarTodosOsLojistas
 };
