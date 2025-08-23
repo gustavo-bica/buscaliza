@@ -1,3 +1,5 @@
+# arquivo .gitignore
+
 # Dependências do Node
 /node_modules
 
