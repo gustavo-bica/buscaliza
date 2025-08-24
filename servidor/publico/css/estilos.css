@@ -276,3 +276,31 @@ header h1 {
   color: #333;
   flex: 1;
 }
+
+.scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 0.6rem;
+  -webkit-overflow-scrolling: touch; /* rolagem suave em iOS */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Edge */
+}
+
+.categorias-container {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+.categorias-lista {
+  display: flex;
+  gap: 1rem; /* Espaçamento uniforme entre as categorias */
+  padding: 0 1rem;
+  flex-wrap: nowrap;
+  width: max-content; /* Faz a lista ter largura mínima necessária */
+  margin: 0 auto;
+  overflow: visible;
+}
