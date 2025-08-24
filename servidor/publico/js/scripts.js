@@ -25,12 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.className = "loja-card";
 
-        const logoUrl = lojista.logo_url || `https://placehold.co/100x100/EFEFEF/333?text=${lojista.nome_loja.charAt(0)}`;
         const status = "Fechada"; // Exemplo
         const statusClass = status.toLowerCase(); // 'fechada' ou 'aberta'
 
+        // Verifica se tem logo_url, se não tem, exibe a primeira letra
+        let logoElement;
+        if (lojista.logo_url) {
+          logoElement = `<img src="${lojista.logo_url}" alt="Logo da ${lojista.nome_loja}" class="loja-logo">`;
+        } else {
+          logoElement = `<div class="loja-logo loja-letra">${lojista.nome_loja.charAt(0).toUpperCase()}</div>`;
+        }
+
         card.innerHTML = `
-                    <img src="${logoUrl}" alt="Logo da ${lojista.nome_loja}" class="loja-logo">
+                    ${logoElement}
                     <div class="loja-info">
                         <h2 class="loja-nome">${lojista.nome_loja}</h2>
                         <p class="loja-status ${statusClass}">${status}</p>
