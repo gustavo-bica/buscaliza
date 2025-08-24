@@ -4,7 +4,18 @@ const dbPool = require('../bd');
 
 const buscarTodosOsLojistas = async (req, res) => {
   try {
-    const [lojistas] = await dbPool.query('SELECT id, usuario_lojista, nome_loja FROM lojistas');
+    const query = `
+      SELECT 
+        l.id, 
+        l.usuario_lojista, 
+        s.nome_loja 
+      FROM 
+        lojistas AS l
+      INNER JOIN 
+        lojas AS s ON l.loja_id = s.id;
+    `;
+
+    const [lojistas] = await dbPool.query(query);
     
     res.status(200).json(lojistas);
 
