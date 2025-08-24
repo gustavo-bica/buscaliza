@@ -17,6 +17,12 @@
         <h1>Bem Vindo ao Buscaliza!</h1>
     </header>
 
+    <div class="search-bar">
+        <input type="text" id="searchInput" name="search-lojas" placeholder="🔍 Pesquisar lojas..."
+            autocomplete="off" />
+        <i class="fa-solid fa-bars menu-icon" title="Menu de opções"></i>
+    </div>
+
     <main id="lojas-container">
         <p class="loading-message">Carregando lojas...</p>
     </main>
@@ -30,7 +36,46 @@
         </a>
     </div>
 
-    <script src="js/scripts.js"></script>
+    <!-- Menu overlay -->
+    <div id="menuOverlay" class="menu-overlay">
+        <div class="menu-conteudo">
+            <!-- Botão de fechar menu -->
+            <button id="fecharMenu" class="btn-fechar-menu" aria-label="Fechar menu">
+                <i class="fa fa-times"></i>
+            </button>
+
+            <!-- Cards do menu -->
+            <div class="menu-cards">
+                <div class="menu-cards">
+                    <div class="menu-card" id="cardBemVindo">
+                        <i class="fa-solid fa-heart card-icon"></i>
+                        <span class="card-text">Bem-Vindos ao Buscaliza</span>
+                    </div>
+
+                    <div class="menu-card" id="cardInformacoes">
+                        <i class="fa-solid fa-info-circle card-icon"></i>
+                        <span class="card-text">Acesse nossas informações</span>
+                    </div>
+
+                    <div class="menu-card" id="cardWhatsapp">
+                        <i class="fa-brands fa-whatsapp card-icon"></i>
+                        <span class="card-text">Chama a gente no WhatsApp</span>
+                    </div>
+
+                    <div class="menu-card" id="cardInstagram">
+                        <i class="fa-brands fa-instagram card-icon"></i>
+                        <span class="card-text">Siga a gente no Instagram</span>
+                    </div>
+
+                    <div class="menu-card" id="cardLoginLojista">
+                        <i class="fa-solid fa-store card-icon"></i>
+                        <span class="card-text">Login do Lojista</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>

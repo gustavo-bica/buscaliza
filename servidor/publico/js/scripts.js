@@ -45,5 +45,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Configuração do menu
+  const menuBtn = document.querySelector(".menu-icon");
+  const menuOverlay = document.getElementById("menuOverlay");
+  const fecharMenuBtn = document.getElementById("fecharMenu");
+
+  if (menuBtn && menuOverlay) {
+    // ABRIR MENU - ao clicar no ícone
+    menuBtn.addEventListener("click", () => {
+      menuOverlay.classList.add("ativo");
+    });
+
+    // FECHAR MENU - ao clicar fora dos cards
+    menuOverlay.addEventListener("click", (e) => {
+      if (e.target === menuOverlay) {
+        menuOverlay.classList.remove("ativo");
+      }
+    });
+
+    // FECHAR MENU - ao clicar no botão X
+    if (fecharMenuBtn) {
+      fecharMenuBtn.addEventListener("click", () => {
+        menuOverlay.classList.remove("ativo");
+      });
+    }
+  }
+
   carregarLojistas();
 });
