@@ -13,7 +13,7 @@ const buscarTodosOsLojistas = async (req, res) => {
       FROM 
         lojistas AS l
       INNER JOIN 
-        lojas AS s ON l.loja_id = s.id;
+        lojas AS s ON l.id = s.lojista_id;
     `;
 
     const [lojistas] = await dbPool.query(query);
