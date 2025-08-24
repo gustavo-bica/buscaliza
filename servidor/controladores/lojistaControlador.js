@@ -8,7 +8,8 @@ const buscarTodosOsLojistas = async (req, res) => {
       SELECT 
         l.id, 
         l.usuario_lojista, 
-        s.nome_loja 
+        s.nome_loja,
+        s.logo_url
       FROM 
         lojistas AS l
       INNER JOIN 

@@ -14,7 +14,7 @@ header h1 {
 }
 
 /* Barra inferior de navegação */
-.navbar {
+.navbar-inferior {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -35,7 +35,7 @@ header h1 {
   font-size: 14px;
 }
 
-.navbar a {
+.navbar-inferior a {
   color: #aaa;
   font-size: 24px;
   text-align: center;
@@ -45,7 +45,7 @@ header h1 {
   cursor: pointer;
 }
 
-.navbar a.active {
+.navbar-inferior a.active {
   color: #2d88ff;
 }
 
@@ -103,14 +103,14 @@ header h1 {
     color: #888;
 }
 
-.search-bar {
+.navbar-superior {
   display: flex;
   align-items: center;
   gap: 1rem;
   padding: 0rem 0rem 0.5rem 0rem; /*cima, direita, baixo, esquerda*/
 }
 
-.search-bar button#loginLojistaBtn {
+.navbar-superior button#loginLojistaBtn {
   background-color: #2d88ff;
   color: white;
   border: none;
@@ -121,11 +121,11 @@ header h1 {
   transition: background-color 0.3s ease;
 }
 
-.search-bar button#loginLojistaBtn:hover {
+.navbar-superior button#loginLojistaBtn:hover {
   background-color: #1c6ed5;
 }
 
-.search-bar input[type="text"] {
+.navbar-superior input[type="text"] {
   width: 100%;
   padding: 0.6rem 1rem;
   font-size: 1rem;
@@ -135,7 +135,7 @@ header h1 {
   transition: border 0.3s ease;
 }
 
-.search-bar input[type="text"]:focus {
+.navbar-superior input[type="text"]:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }

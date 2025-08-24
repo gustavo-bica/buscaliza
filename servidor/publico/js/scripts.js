@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const lojasContainer = document.getElementById("lojas-container");
 
-  async function carregarLojistas() {
+  async function carregarLojas() {
     try {
       // Faz a requisição para a nossa API (o back-end busca no banco)
       const response = await fetch("/api/lojistas");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const card = document.createElement("div");
         card.className = "loja-card";
 
-        const logoUrl = `https://placehold.co/100x100/EFEFEF/333?text=${lojista.nome_loja.charAt(0)}`;
+        const logoUrl = lojista.logo_url || `https://placehold.co/100x100/EFEFEF/333?text=${lojista.nome_loja.charAt(0)}`;
         const status = "Fechada"; // Exemplo
         const statusClass = status.toLowerCase(); // 'fechada' ou 'aberta'
 
@@ -71,5 +71,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  carregarLojistas();
+  carregarLojas();
 });
