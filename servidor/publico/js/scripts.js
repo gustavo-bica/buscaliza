@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) throw new Error("Falha na rede");
 
       const lojistas = await response.json();
-      console.log('DADOS RECEBIDOS DA API:', lojistas);
+      /* console.log('DADOS RECEBIDOS DA API:', lojistas); */
 
       lojasContainer.innerHTML = "";
 
