@@ -41,6 +41,10 @@ header h1 {
   text-align: center;
 }
 
+.menu-icon {
+  cursor: pointer;
+}
+
 .navbar a.active {
   color: #2d88ff;
 }
