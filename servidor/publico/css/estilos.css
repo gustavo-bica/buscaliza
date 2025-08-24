@@ -304,3 +304,15 @@ header h1 {
   margin: 0 auto;
   overflow: visible;
 }
+
+.categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ...outros estilos... */
+}
+
+.categoria span {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
